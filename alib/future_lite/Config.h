@@ -1,0 +1,7 @@
+
+#ifndef FUTURE_LITE_CONFIG_H
+#define FUTURE_LITE_CONFIG_H
+
+#define FUTURE_LITE_USE_COROUTINES 0
+
+#endif
