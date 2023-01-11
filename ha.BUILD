@@ -8,49 +8,6 @@ package(default_visibility = ["//visibility:public"])
 #define LZ4HC_MAX_CLEVEL        16
 
 cc_library(
-    name = "alib",
-    srcs = [
-            "alib/autil/libautil.a",
-            "alib/anet/libanet.a",
-            "alib/alog/libalog.a",
-            "alib/fslib/libfslib-framework.a",
-            "alib/fslib/libfslib_plugin_hdfs.a",
-            "alib/fslib/libfslib_plugin_http.a",
-            "alib/kmonitor/libkmonitor_client.a",
-            "alib/kmonitor_adapter/libkmonitor_adapter.a",
-            "alib/future_lite/libfuture_lite.a",
-            "alib/beeper/libbeeper-framework.a",
-            "alib/beeper/libbeeper_plugin_sqi.a",
-        ],
-    hdrs = glob([
-            "alib/autil/*.h",
-            "alib/autil/**/*.h",
-            "alib/anet/*.h",
-            "alib/alog/*.h",
-            "alib/fslib/*.h",
-            "alib/fslib/**/*.h",
-            "alib/kmonitor/**/*.h",
-            "alib/kmonitor_adapter/*.h",
-            "alib/future_lite/*.h",
-            "alib/future_lite/**/*.h",
-            "alib/beeper/*.h",
-            "alib/beeper/**/*.h",
-        ]),
-    alwayslink = 1,
-    copts = ["-std=c++14"],
-    linkopts = [
-        "-pthread",
-        "-lrt",
-        "-lstdc++",
-    ],
-    defines = [],
-    strip_include_prefix = "alib",
-    visibility = ["//visibility:public"],
-    deps = [
-    ],
-)
-
-cc_library(
     name = "indexlib",
     srcs = glob([
             "aios/indexlib/indexlib/**/*.h",
@@ -91,6 +48,6 @@ cc_library(
     strip_include_prefix = "aios/indexlib",
     visibility = ["//visibility:public"],
     deps = [
-        ":alib"
+        "@hello_havenask:alib"
     ],
 )

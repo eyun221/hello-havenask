@@ -1,1 +1,1 @@
-bazel  build -s  //:indexlib
+bazel  build -s  //:hello_ha
