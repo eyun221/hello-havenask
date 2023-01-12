@@ -12,5 +12,5 @@ new_git_repository(
     name = "havenask",
     remote = "https://github.com/alibaba/havenask.git",
     tag = "v0.2.2",
-    build_file = "@hello-havenask//:ha.BUILD",
+    build_file = "@hello_havenask//:ha.BUILD",
 )
